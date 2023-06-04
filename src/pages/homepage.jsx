@@ -9,9 +9,7 @@ function HomePage() {
   return (
     <>
       <Hero />
-      <Link to="/galeries">
-        <Content />
-      </Link>
+      <Content />
       <Carousel />
     </>
   );
