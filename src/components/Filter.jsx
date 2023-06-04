@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Filter({ data, onFilter }) {
+function Filter({ data, onFilter, countData }) {
   const [show, setShow] = useState();
   const [selectedCategory, setSelectedCategory] = useState("");
 
@@ -29,7 +29,7 @@ function Filter({ data, onFilter }) {
         <div>
           <h1>
             {" "}
-            All Galeries <span>{`(${data?.length})`}</span>
+            All Galeries <span>{`(${countData?.length})`}</span>
           </h1>
           <p className="py-4"> The Latest Galery</p>
         </div>

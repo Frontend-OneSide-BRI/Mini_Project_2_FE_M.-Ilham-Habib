@@ -45,7 +45,9 @@ function Carousel(props) {
                   alt="/"
                   key={item?.id}
                 />
-                <p>{item?.title}</p>
+                <p className="text-2xl text-center my-3 font-bold">
+                  {item?.title}
+                </p>
               </>
             )}
           </div>

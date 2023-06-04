@@ -52,7 +52,11 @@ const Galeries = () => {
   return (
     <>
       <Hero data={true} value={search} onChange={handleSearch} />
-      <Filter data={listData} onFilter={handleFilter} />
+      <Filter
+        data={listData}
+        onFilter={handleFilter}
+        countData={filteredData}
+      />
       <div className="max-w-[1240px] mx-auto px-4 py-6">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 md:grid-cols-3 gap-4">
           {listData.length === 0 || isLoading ? (
