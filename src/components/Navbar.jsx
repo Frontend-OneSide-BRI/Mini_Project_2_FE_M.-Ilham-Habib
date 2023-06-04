@@ -10,6 +10,7 @@ import {
   FaPinterest,
   FaYoutube,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [nav, setNav] = useState(false);
@@ -20,22 +21,21 @@ function Navbar() {
     setLogo(!logo);
   }
   return (
-    <div className="flex justify-between items-center h-20 px-4 absolute z-30 text-white mix-blend-difference w-full">
+    <div className="flex justify-between items-center h-20 px-4 absolute z-30 lg:text-white text-black  w-full lg:mix-blend-difference">
       <div>
         <h1 onClick={handleNav} className={logo ? "hidden" : "block"}>
           Galery of Art
         </h1>
       </div>
       <ul className="hidden md:flex">
-        <li>Home</li>
-        <li>Home</li>
-        <li>Home</li>
-        <li>Home</li>
+        <Link to="/">
+          <li>Homepage</li>
+        </Link>
+        <Link to="/galeries">
+          <li>Galery</li>
+        </Link>
       </ul>
-      <div className="hidden md:flex">
-        <BiSearch className="mr-2" size={20} />
-        <BsPerson size={20} />
-      </div>
+      <div className="hidden md:flex">Mini Project 2</div>
 
       {/* Hamburger */}
       <div onClick={handleNav} className="md:hidden z-30">
@@ -57,21 +57,12 @@ function Navbar() {
       >
         <ul>
           <h1>Galery of Art</h1>
-          <li className="border-b">Home</li>
-          <li className="border-b">Home</li>
-          <li className="border-b">Home</li>
-          <li className="border-b">Home</li>
-          <div className="flex flex-col">
-            <button className="my-6">Search</button>
-            <button>Account</button>
-          </div>
-          <div className="flex justify-between my-6">
-            <FaFacebook className="icon" />
-            <FaTwitter className="icon" />
-            <FaYoutube className="icon" />
-            <FaPinterest className="icon" />
-            <FaInstagram className="icon" />
-          </div>
+          <Link to="/">
+            <li>Homepage</li>
+          </Link>
+          <Link to="/galeries">
+            <li>Galery</li>
+          </Link>
         </ul>
       </div>
     </div>
