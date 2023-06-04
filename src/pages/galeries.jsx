@@ -9,6 +9,16 @@ import ListGaleries from "../components/ListGaleries";
 const Galeries = () => {
   const [listData, setListData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [filteredData, setFilteredData] = useState([]);
+
+  function handleFilter(category) {
+    if (category === "") {
+      setFilteredData(listData);
+    } else {
+      const filtered = listData.filter((item) => item.category === category);
+      setFilteredData(filtered);
+    }
+  }
 
   function getData() {
     axios
@@ -30,15 +40,13 @@ const Galeries = () => {
   return (
     <>
       <Hero data={true} />
-      {/* <Filter /> */}
+      <Filter data={listData} onFilter={handleFilter} />
       <div className="max-w-[1240px] mx-auto px-4 py-6">
-        <h1> All Galeries</h1>
-        <p className="py-4"> The Latest Galery</p>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 md:grid-cols-3 gap-4">
           {listData.length === 0 || isLoading ? (
             <p>Tunggu Sebentar</p>
           ) : (
-            listData?.map((item) => {
+            filteredData?.map((item) => {
               return (
                 <ListGaleries
                   title={item?.title}
