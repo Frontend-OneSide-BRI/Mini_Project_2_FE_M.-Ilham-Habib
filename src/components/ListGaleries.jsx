@@ -6,16 +6,12 @@ function ListGaleries(props) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   function openModal() {
-    console.log("masukk sini");
     setIsModalOpen(true);
   }
 
   function closeModal() {
-    console.log("masuk sini");
     setIsModalOpen(false);
   }
-
-  console.log(isModalOpen);
 
   return (
     <div className="relative">
