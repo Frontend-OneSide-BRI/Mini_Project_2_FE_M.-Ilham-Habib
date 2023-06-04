@@ -4,14 +4,21 @@ import Hero from "./components/Hero.jsx";
 // import Destinations from "./components/LatestGalery.jsx";
 import Carousel from "./components/Carousel.jsx";
 import Content from "./components/Content.jsx";
+import HomePage from "./pages/homepage.jsx";
+import Galeries from "./pages/galeries.jsx";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Hero />
-      <Content />
-      <Carousel />
+      <BrowserRouter>
+        <Navbar />
+
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/galeries" element={<Galeries />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

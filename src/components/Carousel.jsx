@@ -7,7 +7,7 @@ function Carousel(props) {
 
   useEffect(() => {
     setTimeout(() => {
-      const data = props?.dataSlider?.slice(0, 5);
+      const data = props?.dataSlider;
       setSliderData(data);
     }, 1000);
   }, []);
