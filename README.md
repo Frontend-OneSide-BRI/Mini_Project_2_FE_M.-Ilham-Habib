@@ -1,3 +1,20 @@
+# Mini Project 2
+
+Authors: Muhamad Ilham Habib
+
+## Requirements
+
+- Penggunaan Responsive Layout
+- Penggunaan Elements: Card, Carousel, Button, Navbar, Modal
+- Penggunaan hyperlink untuk navigasi antar halaman (min 2 halaman)
+- Penyusunan UI/UX yang rapi
+
+## Screenshots
+
+![img](/public/assets/ss2.png)
+![img](/public/assets/ss1.png)
+![img](/public/assets/ss3.png.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
