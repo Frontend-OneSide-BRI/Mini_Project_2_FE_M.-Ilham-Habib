@@ -43,7 +43,7 @@ function Content() {
             className="w-full h-full object-cover col-span-2 md:col-span-3 row-span-2"
             alt="image1"
           />
-          {data?.length < 0 || isloading ? (
+          {data?.length === 0 || isloading ? (
             <p>Tunggu Sebentar</p>
           ) : (
             <LatestGalery data={data} />
@@ -52,7 +52,7 @@ function Content() {
       </div>
 
       <div className="max-w-[1240px] mx-auto px-4 py-6 grid sm:grid-cols-2 lg:grid-cols-4 md:grid-cols-3 gap-4">
-        {data.length < 0 || isloading ? (
+        {data.length === 0 || isloading ? (
           <p>Tunggu Sebentar</p>
         ) : (
           data?.map((item) => {
@@ -71,7 +71,7 @@ function Content() {
       </div>
 
       <div className="max-w-[1240px] mx-auto px-4 py-16 relative flex justify-center items-center">
-        {data?.length < 0 || isloading ? (
+        {data?.length === 0 || isloading ? (
           <p>Tunggu Sebentar</p>
         ) : (
           <Carousel dataSlider={data} />
