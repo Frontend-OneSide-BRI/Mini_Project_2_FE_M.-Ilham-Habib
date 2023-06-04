@@ -31,7 +31,7 @@ function Filter({ data, onFilter, countData }) {
             {" "}
             All Galeries <span>{`(${countData?.length})`}</span>
           </h1>
-          <p className="py-4"> The Latest Galery</p>
+          <p className="py-4"> Find Your Inspiration</p>
         </div>
         <div className="w-1/5">
           <button

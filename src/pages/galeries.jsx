@@ -61,6 +61,8 @@ const Galeries = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 md:grid-cols-3 gap-4">
           {listData.length === 0 || isLoading ? (
             <p>Tunggu Sebentar</p>
+          ) : filteredData.length === 0 ? (
+            <p className="text-2xl py-10">Tidak ada data</p>
           ) : (
             filteredData?.map((item) => {
               return (
