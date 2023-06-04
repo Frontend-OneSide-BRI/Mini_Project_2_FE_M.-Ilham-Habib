@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function Filter({ data, onFilter, countData }) {
-  const [show, setShow] = useState();
+  const [show, setShow] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState("");
 
   const handleCategoryChange = (e) => {
