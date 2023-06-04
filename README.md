@@ -13,7 +13,7 @@ Authors: Muhamad Ilham Habib
 
 ![img](/public/assets/ss2.png)
 ![img](/public/assets/ss1.png)
-![img](/public/assets/ss3.png.png)
+![img](/public/assets/ss3.png)
 
 # Getting Started with Create React App
 
