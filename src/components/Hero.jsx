@@ -2,8 +2,8 @@ import React from "react";
 import video from "../assets/video.mp4";
 import { AiOutlineSearch } from "react-icons/ai";
 
-function Hero(props) {
-  const viewInGalery = props?.data;
+function Hero({ data, value, onChange }) {
+  const viewInGalery = data;
   return (
     <div className="w-full h-screen relative z-20">
       <video
@@ -21,6 +21,8 @@ function Hero(props) {
           <form className="flex justify-between items-center max-w-[700px] mx-auto w-full border p-1 rounded-md text-black bg-gray-100/90">
             <div>
               <input
+                onChange={onChange}
+                value={value}
                 className="bg-transparent w-[300px] sm:w-[400px] font-[Poppins] focus:outline-none"
                 type="text"
                 placeholder="Search Destinations"

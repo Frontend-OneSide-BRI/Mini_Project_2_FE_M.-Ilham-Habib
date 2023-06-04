@@ -10,6 +10,7 @@ const Galeries = () => {
   const [listData, setListData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [filteredData, setFilteredData] = useState([]);
+  const [search, setSearch] = useState("");
 
   function handleFilter(category) {
     if (category === "") {
@@ -20,12 +21,23 @@ const Galeries = () => {
     }
   }
 
+  function handleSearch(e) {
+    const inputValue = e.target.value;
+    setSearch(inputValue);
+
+    const filtered = listData.filter((item) =>
+      item.title.toLowerCase().includes(inputValue.toLowerCase())
+    );
+    setFilteredData(filtered);
+  }
+
   function getData() {
     axios
       .get(`${process.env.REACT_APP_BASE_URL}galeries`)
       .then((res) => {
         const fetchData = res?.data;
         setListData(fetchData);
+        setFilteredData(fetchData);
         setIsLoading(false);
       })
       .catch((e) => {
@@ -39,7 +51,7 @@ const Galeries = () => {
 
   return (
     <>
-      <Hero data={true} />
+      <Hero data={true} value={search} onChange={handleSearch} />
       <Filter data={listData} onFilter={handleFilter} />
       <div className="max-w-[1240px] mx-auto px-4 py-6">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 md:grid-cols-3 gap-4">
