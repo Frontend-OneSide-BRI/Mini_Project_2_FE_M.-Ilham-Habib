@@ -20,7 +20,7 @@ function Navbar() {
     setLogo(!logo);
   }
   return (
-    <div className="flex justify-between items-center h-20 px-4 absolute z-10 text-white mix-blend-difference w-full">
+    <div className="flex justify-between items-center h-20 px-4 absolute z-30 text-white mix-blend-difference w-full">
       <div>
         <h1 onClick={handleNav} className={logo ? "hidden" : "block"}>
           Galery of Art
@@ -38,7 +38,7 @@ function Navbar() {
       </div>
 
       {/* Hamburger */}
-      <div onClick={handleNav} className="md:hidden z-10">
+      <div onClick={handleNav} className="md:hidden z-30">
         {nav ? (
           <AiOutlineClose size={20} className="text-black" />
         ) : (

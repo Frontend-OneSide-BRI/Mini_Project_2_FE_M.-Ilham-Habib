@@ -4,7 +4,7 @@ import { AiOutlineSearch } from "react-icons/ai";
 
 function Hero() {
   return (
-    <div className="w-full h-screen relative">
+    <div className="w-full h-screen relative z-20">
       <video
         className="w-full h-full object-cover"
         src={video}
